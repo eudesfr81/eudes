@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: radial-gradient(circle at 87.5% 12.5%, #ffad7a 0, #f9a17a 12.5%, #eb9378 25%, #d88575 37.5%, #c2766f 50%, #ab6868 62.5%, #975d62 75%, #85535c 87.5%, #764b56 100%);
+    display: flex;
+    justify-content: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+header {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  text-align: center;
+  margin-top: 80px;
+
+}
+main {
+  position: absolute;
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  margin-top: 500px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(235, 142, 20);
+  padding: 20px;
+  text-shadow: 5px 5px 10px black;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+}
+
+.foto img {
+  border-radius: 100%;
+  height: 300px;
+  width: 300px;
+}
+.logos #insta {
+  margin-top: 18px;
+  height: 60px;
+  width: 60px;
+}
+.logos #yout {
+  padding-left: 30px;
+  margin-top: 12px;
+  height: 75px;
+  width: 110px;
+}
+.logos #wats {
+  padding-left: 20px;
+  margin-top: 12px;
+  height: 75px;
+  width: 80px;
+}
+
+.switch__container {
+  margin-left: 160px;
+}
+
+.dark-mode {
+    background-image: linear-gradient(to right bottom, #b463ec, #a34ec7, #8f3ba3, #7a2982, #641863);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-color: black;
+    color: white;
+  }
+/* estrutura do botão */
+.switch {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+/* desenho quando cursor ficar em cima */
+.switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select:none;
+}
+/* fundo cinza de deslize */
+  .switch--shadow + label {
+    padding: 2px;
+    width: 70px;
+    height: 30px;
+    border-radius: 60px;
+  }
+/* transição de fundos e cabeça do seletor */
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+  display:block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: '';
+}
+.switch--shadow + label:before {
+  right: 5px;
+  background-color: white;
+  border-radius: 30px;
+  transition: all 0.4s;
+}
+/* tamanho do seletor */
+.switch--shadow + label:after {
+  width: 28px;
+  height: 28px;
+  margin-top: 1.8px;
+  margin-left: 1.8px;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
+  background-image: url(./sol.png);
+  background-position-y: 4px;
+  background-position-x:3px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  
+}
+/* movimentação do seletor e cor */
+.switch--shadow:checked + label:before {
+    background-color: #ffffff;
+
+  }
+  .switch--shadow:checked + label:after {
+    transform: translateX(35px);
+    background-image: url(./lua.png);
+    background-position-y: 4px;
+    background-position-x: 4px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
